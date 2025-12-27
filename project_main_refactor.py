@@ -12,6 +12,7 @@ class ImageData:
             self.barcode_img = self.create_barcode()
             self.grid_img = self.draw_grid()
             self.barcode_grid_img = self.barcode_on_grid()
+            self.barcode_grid_img.show()
 
     def encode_string(self):
         # take input string, convert to bytes, and then encode for Data Matrix using pylibdmtx.encode()
@@ -70,8 +71,16 @@ class ImageData:
         barcode_on_grid_img = PIL_ImageChops.multiply(self.grid_img, barcode_canvas)
         return barcode_on_grid_img
 
-user_image = ImageData(448,448,4,6,25)
-user_image.barcode_grid_img.show()
+
+def main():
+    '''
+    Work-in-progress. Allow user to either create a grid or crop a grid.
+    '''
+    test_numbers = [448, 448, 2, 4, 40]
+
+    user_image = ImageData(test_numbers)
+    print(user_image.barcode_encoded)
+    user_image.barcode_grid_img.show()
 
 
 
