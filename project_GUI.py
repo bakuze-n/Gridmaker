@@ -92,7 +92,8 @@ entry_CellHeight = ttk.Entry(frame_A_column2, width=12)
 entry_CellHeight.grid(row=0, column=0, sticky='e')
 entry_Columns = ttk.Entry(frame_A_column2, width=12)
 entry_Columns.grid(row=1, column=0, sticky='e')
-combobox_GridColor = ttk.Combobox(frame_A_column2, values=['#000000', "#252525", "#505050", "#757575"], width=22)
+list_gridcolors = ['#000000', "#252525", "#505050", "#757575"]
+combobox_GridColor = ttk.Combobox(frame_A_column2, values=list_gridcolors, width=22)
 combobox_GridColor.grid(row=2, column=0, sticky='e')
 
 frame_B.grid_rowconfigure(index=0, weight=1)
