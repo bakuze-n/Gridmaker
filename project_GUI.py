@@ -4,6 +4,7 @@ from tkinter import ttk
 '''
 GUI for Gridmaker with two tabs: one to create a grid, and one to crop a grid (using the barcode).
 Will be refactored soon after the design has been figured out.
+(repetitive code will be refactored into concise functions)
 '''
 
 # Base window for GUI, set width and height
